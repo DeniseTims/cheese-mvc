@@ -1,9 +1,23 @@
-package models;
+package org.ryanstrong.models;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 public class Cheese {
-    private Integer cheeseId;
+//    @Id
+//    @GeneratedValue
+    private int id;
+
+    @NotNull
+    @Size(min=3, max=15)
     private String name;
+
+    @NotNull
+    @Size(min=1, message = "Description can not be empty")
     private String description;
+
+    private Integer cheeseId;
+
 
     public Cheese(String name, String description){
         this();

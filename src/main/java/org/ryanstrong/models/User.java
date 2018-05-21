@@ -1,4 +1,4 @@
-package models;
+package org.ryanstrong.models;
 
 public class User {
     private Integer userId;
