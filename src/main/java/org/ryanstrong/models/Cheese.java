@@ -7,9 +7,10 @@ public class Cheese {
 //    @Id
 //    @GeneratedValue
     private int id;
+    private static int nextId =1;
 
     @NotNull
-    @Size(min=3, max=15)
+    @Size(min=1, max=15)
     private String name;
 
     @NotNull
@@ -18,14 +19,12 @@ public class Cheese {
 
     private Integer cheeseId;
 
-
     public Cheese(String name, String description){
         this();
         this.name=name;
         this.description=description;
     }
     public Cheese(){
-        Integer nextId =1;
         cheeseId = nextId;
         nextId++;
     }
@@ -44,4 +43,9 @@ public class Cheese {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public Integer getId() {
+        return id;
+    }
+    public void setId(int id){this.id=id;}
 }
